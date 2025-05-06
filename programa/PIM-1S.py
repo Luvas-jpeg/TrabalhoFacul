@@ -7,7 +7,7 @@ import re
 
 # Carregar o arquivo CSS
 def load_css():
-    with open("trabalhofacul/style.css") as f:
+    with open("trabalhofacul/stylesheet/style.css") as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 # Configuração da página
@@ -331,6 +331,7 @@ def mostrar_login():
                         usuarios[new_username] = {
                             "senha": new_password,
                             "cursos_concluidos": [],
+                            "notas": {},
                             "acessos": 0,
                             "data_cadastro": datetime.now().strftime("%d/%m/%Y %H:%M:%S")
                         }
@@ -477,10 +478,11 @@ def mostrar_resultado():
     if st.session_state.pontuacao >= 7:
         st.success(f"Parabéns! Você acertou {st.session_state.pontuacao} de 10 questões e concluiu o curso!")
         
-        # Registrar curso como concluído
+        # Registrar curso como concluído e salvar nota
         usuarios = carregar_usuarios()
         if st.session_state.curso_atual not in usuarios[st.session_state.usuario_atual]["cursos_concluidos"]:
             usuarios[st.session_state.usuario_atual]["cursos_concluidos"].append(st.session_state.curso_atual)
+            usuarios[st.session_state.usuario_atual]["notas"][st.session_state.curso_atual] = st.session_state.pontuacao
             salvar_usuarios(usuarios)
     else:
         st.error(f"Você acertou {st.session_state.pontuacao} de 10 questões. Você precisa acertar pelo menos 7 para concluir o curso.")
@@ -523,10 +525,16 @@ def mostrar_conclusao():
     Por ter concluído com sucesso todos os cursos da nossa plataforma.
     
     Cursos concluídos:
-    - ✅ Introdução à Informática
-    - ✅ Navegação em Rede Social
-    - ✅ Informática para Negócios
+    """)
     
+    usuarios = carregar_usuarios()
+    notas = usuarios[st.session_state.usuario_atual]["notas"]
+    
+    for curso in usuarios[st.session_state.usuario_atual]["cursos_concluidos"]:
+        nota = notas.get(curso, "N/A")
+        st.markdown(f"- ✅ {curso} - Nota: {nota}/10")
+    
+    st.markdown("""
     🚀 Continue aprendendo e crescendo! 🚀
     """)
     
