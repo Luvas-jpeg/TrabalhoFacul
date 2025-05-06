@@ -1,6 +1,7 @@
 /* Estilos gerais */
 .stApp {
     background: #1a1a1a;
+    animation: fadeIn 0.5s ease-in;
 }
 
 /* Estilo para títulos */
@@ -73,7 +74,6 @@ h1, h2, h3 {
     padding: 1rem;
     border-radius: 5px;
     margin: 1rem 0;
-    border: 1px solid #7ee8fa;
 }
 
 .stError {
@@ -82,7 +82,6 @@ h1, h2, h3 {
     padding: 1rem;
     border-radius: 5px;
     margin: 1rem 0;
-    border: 1px solid #ff6b6b;
 }
 
 /* Estilo para cards de cursos */
@@ -90,16 +89,12 @@ h1, h2, h3 {
     background-color: #2a2a2a;
     border-radius: 10px;
     padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(126, 232, 250, 0.2);
     margin: 1rem 0;
     transition: all 0.3s ease;
-    border: 1px solid #7ee8fa;
 }
 
 .element-container:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(126, 232, 250, 0.3);
-    border-color: #6c63ff;
     background-color: #333333;
 }
 
@@ -110,7 +105,6 @@ h1, h2, h3 {
     border-radius: 5px;
     margin: 0.5rem 0;
     color: #ffffff;
-    border: 1px solid #7ee8fa;
 }
 
 /* Estilo para o certificado */
@@ -118,9 +112,7 @@ h1, h2, h3 {
     background-color: #2a2a2a;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(126, 232, 250, 0.2);
     margin: 2rem 0;
-    border: 1px solid #7ee8fa;
     color: #ffffff;
 }
 
@@ -145,49 +137,6 @@ a:hover {
     color: #ffffff;
 }
 
-/* Estilo para o fundo dos elementos */
-.stApp > div {
-    background-color: #2a2a2a;
-    border-radius: 10px;
-    padding: 1rem;
-    margin: 1rem;
-    box-shadow: 0 4px 6px rgba(126, 232, 250, 0.1);
-    border: 1px solid #7ee8fa;
-}
-
-/* Estilo para o hover dos elementos interativos */
-.stButton > button:hover,
-.stRadio > div:hover,
-.element-container:hover {
-    background-color: #6c63ff;
-    color: #ffffff;
-}
-
-/* Estilo para seleção de texto */
-::selection {
-    background-color: #6c63ff;
-    color: #ffffff;
-}
-
-/* Estilo para scrollbar */
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: #1a1a1a;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #7ee8fa;
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #6c63ff;
-}
-
-/* Estilos adicionais para melhorar a aparência */
 .stMarkdown p {
     line-height: 1.6;
     margin-bottom: 1rem;
@@ -216,22 +165,32 @@ hr {
     opacity: 0.3;
 }
 
-/* Estilo para tooltips */
-.tooltip {
-    background-color: #2a2a2a;
-    color: #ffffff;
-    border: 1px solid #7ee8fa;
-    border-radius: 5px;
-    padding: 0.5rem;
-    font-size: 0.9rem;
+/* Estilo para scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
 }
 
-/* Estilo para animações suaves */
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #7ee8fa;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6c63ff;
+}
+
+/* Estilo para seleção de texto */
+::selection {
+    background-color: #6c63ff;
+    color: #ffffff;
+}
+
+/* Animação de fade in */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
-}
-
-.stApp {
-    animation: fadeIn 0.5s ease-in;
 } 

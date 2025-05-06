@@ -7,7 +7,7 @@ import re
 
 # Carregar o arquivo CSS
 def load_css():
-    with open("trabalhofacul/stylesheet/style.css") as f:
+    with open("stylesheet/style.css") as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 # Configuração da página
@@ -21,7 +21,7 @@ st.set_page_config(
 load_css()
 
 # Criar pasta data se não existir
-DATA_DIR = "trabalhofacul/data"
+DATA_DIR = "data"
 if not os.path.exists(DATA_DIR):
     os.makedirs(DATA_DIR)
 
@@ -30,18 +30,21 @@ USERS_FILE = os.path.join(DATA_DIR, "usuarios.json")
 
 # Inicializar arquivo de usuários se não existir
 if not os.path.exists(USERS_FILE):
-    with open(USERS_FILE, "w") as f:
-        json.dump({}, f)
+    with open(USERS_FILE, "w", encoding='utf-8') as f:
+        json.dump({}, f, ensure_ascii=False, indent=4)
 
 # Função para carregar usuários
 def carregar_usuarios():
-    with open(USERS_FILE, "r") as f:
-        return json.load(f)
+    try:
+        with open(USERS_FILE, "r", encoding='utf-8') as f:
+            return json.load(f)
+    except json.JSONDecodeError:
+        return {}
 
 # Função para salvar usuários
 def salvar_usuarios(usuarios):
-    with open(USERS_FILE, "w") as f:
-        json.dump(usuarios, f)
+    with open(USERS_FILE, "w", encoding='utf-8') as f:
+        json.dump(usuarios, f, ensure_ascii=False, indent=4)
 
 # Função para registrar acesso
 def registrar_acesso(username):
@@ -359,7 +362,9 @@ def mostrar_cursos():
         st.write(f"### {curso}")
         if concluido:
             st.success("✅ Concluído")
-        if st.button("Selecionar", key=curso, disabled=concluido):
+            nota = usuarios[st.session_state.usuario_atual]["notas"].get(curso, "N/A")
+            st.write(f"Nota anterior: {nota}/10")
+        if st.button("Selecionar", key=curso):
             st.session_state.curso_atual = curso
             st.session_state.pagina = "curso"
             st.rerun()
@@ -370,7 +375,9 @@ def mostrar_cursos():
         st.write(f"### {curso}")
         if concluido:
             st.success("✅ Concluído")
-        if st.button("Selecionar", key=curso, disabled=concluido):
+            nota = usuarios[st.session_state.usuario_atual]["notas"].get(curso, "N/A")
+            st.write(f"Nota anterior: {nota}/10")
+        if st.button("Selecionar", key=curso):
             st.session_state.curso_atual = curso
             st.session_state.pagina = "curso"
             st.rerun()
@@ -381,7 +388,9 @@ def mostrar_cursos():
         st.write(f"### {curso}")
         if concluido:
             st.success("✅ Concluído")
-        if st.button("Selecionar", key=curso, disabled=concluido):
+            nota = usuarios[st.session_state.usuario_atual]["notas"].get(curso, "N/A")
+            st.write(f"Nota anterior: {nota}/10")
+        if st.button("Selecionar", key=curso):
             st.session_state.curso_atual = curso
             st.session_state.pagina = "curso"
             st.rerun()
