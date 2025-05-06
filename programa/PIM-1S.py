@@ -20,8 +20,13 @@ st.set_page_config(
 # Carregar CSS
 load_css()
 
+# Criar pasta data se não existir
+DATA_DIR = "trabalhofacul/data"
+if not os.path.exists(DATA_DIR):
+    os.makedirs(DATA_DIR)
+
 # Arquivo para armazenar dados dos usuários
-USERS_FILE = "usuarios.json"
+USERS_FILE = os.path.join(DATA_DIR, "usuarios.json")
 
 # Inicializar arquivo de usuários se não existir
 if not os.path.exists(USERS_FILE):
