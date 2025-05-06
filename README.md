@@ -1,30 +1,86 @@
-_Lucas Vínicios Martins Alves_
-_Estudante da UNIP - ADS_ 
+# Sistema de Cursos Online - PIM 1° Semestre
 
-Neste repositório estarão ***TODOS OS PROJETOS SEMESTRAIS DA FACULDADE***
+## 📚 Sobre o Projeto
+Sistema de cursos online desenvolvido como Projeto Integrado Multidisciplinar (PIM) do primeiro semestre do curso de Análise e Desenvolvimento de Sistemas da UNIP.
 
-# PIM - 1° Semestre
-## Integrantes:
-### Lucas Vinícios Martins Alves
-### Arthur
-### Luis
-### Luan
-### Vinicius
-### Davi
----
-<h4> Montamos um "site" de curso básico de informática, utilizando python e sua biblioteca streamlit para criar a inferface do "site", operative sistem (OS) para salvar os arquivos json numa pasta, webbrowser para 
-colocar links de vídeos do youtube, datetime para conseguir as informações do usuário (quando ele criou a conta, qual foi seu último acesso) ,RE (Regular Expression) para conseguir fazer uma verificação de que a 
-senha que o usuário digitou corresponde com as normas de segurança de senha que colocamos no programa.</h4>
-<p> Como estamos no 1° ano da Faculdade, nós utilizamos IA (Inteligencia Artificial) para nos auxiliar no nosso desenvolvimento do projeto, ela que nos informou sobre as bibliotecas, certas partes do código, mas a
-maior parte do raciocínio foi desenvolvido pelo grupo </p>
+## 🚀 Tecnologias Utilizadas
+- Python 3.x
+- Streamlit (Framework para interface web)
+- JSON (Armazenamento de dados)
+- Regular Expressions (Validação de senhas)
+- Datetime (Gerenciamento de datas)
+- Webbrowser (Integração com vídeos)
 
-## - Funcionamento:
-Ao utilizar o streamlit run (arquivo do programa), ja apararece um menu de login e cadastro:
-<div align="left"
+## 👥 Equipe de Desenvolvimento
+- Lucas Vinícios Martins Alves
+- Arthur
+- Luis
+- Luan
+- Vinicius
+- Davi
 
-  ![Menu Login](https://github.com/user-attachments/assets/a533e02d-ecc2-4738-8bbb-b383847cc50a)
-</div>
-<div align="right"
+## 💻 Funcionalidades
+- Sistema de autenticação (login/cadastro)
+- Validação de senha forte
+- Cursos interativos com vídeos do YouTube
+- Sistema de avaliação com questões
+- Certificado de conclusão
+- Histórico de acessos
+- Armazenamento de progresso do usuário
 
-  ![Menu Cadastro](https://github.com/user-attachments/assets/318236fa-3b6e-443e-8ffe-b7052ca4eeec)
-</div>
+## 🔒 Requisitos de Segurança
+- Senha deve conter:
+  - Mínimo de 8 caracteres
+  - Pelo menos uma letra maiúscula
+  - Pelo menos uma letra minúscula
+  - Pelo menos um número
+  - Pelo menos um caractere especial
+
+## 🛠️ Instalação e Execução
+1. Clone o repositório
+```bash
+git clone [URL_DO_REPOSITÓRIO]
+```
+
+2. Instale as dependências
+```bash
+pip install -r requirements.txt
+```
+
+3. Execute o projeto
+```bash
+streamlit run programa/PIM-1S.py
+```
+
+## 📋 Estrutura do Projeto
+```
+trabalhofacul/
+├── programa/
+│   └── PIM-1S.py
+├── data/
+│   └── usuarios.json
+├── stylesheet/
+│   └── style.css
+└── README.md
+```
+
+## 🎯 Objetivos do Projeto
+- Desenvolver um sistema de cursos online funcional
+- Aplicar conceitos aprendidos no primeiro semestre
+- Criar uma interface amigável e responsiva
+- Implementar sistema de autenticação seguro
+- Gerenciar dados dos usuários de forma eficiente
+
+## 📝 Notas de Desenvolvimento
+Este projeto foi desenvolvido com auxílio de Inteligência Artificial para otimização do processo de desenvolvimento, sendo utilizado principalmente para:
+- Sugestão de bibliotecas
+- Estruturação de código
+- Resolução de problemas específicos
+
+A maior parte do raciocínio e desenvolvimento foi realizado pela equipe, utilizando a IA como ferramenta de suporte.
+
+## 📄 Licença
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## 📧 Contato
+Para mais informações, entre em contato com a equipe de desenvolvimento.
