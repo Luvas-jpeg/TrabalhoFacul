@@ -3,6 +3,12 @@ import json
 import os
 import webbrowser
 from datetime import datetime
+import re
+
+# Carregar o arquivo CSS
+def load_css():
+    with open("trabalhofacul/style.css") as f:
+        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 # Configuração da página
 st.set_page_config(
@@ -10,6 +16,9 @@ st.set_page_config(
     page_icon="📚",
     layout="centered"
 )
+
+# Carregar CSS
+load_css()
 
 # Arquivo para armazenar dados dos usuários
 USERS_FILE = "usuarios.json"
@@ -38,6 +47,25 @@ def registrar_acesso(username):
         usuarios[username]["acessos"] += 1
         usuarios[username]["ultimo_acesso"] = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
         salvar_usuarios(usuarios)
+
+# Função para validar senha forte
+def validar_senha_forte(senha):
+    if len(senha) < 8:
+        return False, "A senha deve ter pelo menos 8 caracteres"
+    
+    if not re.search(r'[A-Z]', senha):
+        return False, "A senha deve conter pelo menos uma letra maiúscula"
+    
+    if not re.search(r'[a-z]', senha):
+        return False, "A senha deve conter pelo menos uma letra minúscula"
+    
+    if not re.search(r'[0-9]', senha):
+        return False, "A senha deve conter pelo menos um número"
+    
+    if not re.search(r'[!@#$%^&*(),.?":{}|<>]', senha):
+        return False, "A senha deve conter pelo menos um caractere especial (!@#$%^&*(),.?\":{}|<>)"
+    
+    return True, "Senha válida"
 
 # Informações dos cursos
 cursos = {
@@ -270,24 +298,39 @@ def mostrar_login():
         new_password = st.text_input("Senha", type="password", key="cadastro_password")
         confirm_password = st.text_input("Confirmar senha", type="password", key="confirm_password")
         
+        # Adicionar informações sobre os requisitos da senha
+        st.markdown("""
+        **Requisitos da senha:**
+        - Mínimo de 8 caracteres
+        - Pelo menos uma letra maiúscula
+        - Pelo menos uma letra minúscula
+        - Pelo menos um número
+        - Pelo menos um caractere especial (!@#$%^&*(),.?\":{}|<>)"
+        """)
+        
         if st.button("Cadastrar"):
             if not new_username or not new_password or not confirm_password:
                 st.error("Por favor, preencha todos os campos.")
             elif new_password != confirm_password:
                 st.error("As senhas não coincidem.")
             else:
-                usuarios = carregar_usuarios()
-                if new_username in usuarios:
-                    st.error("Este nome de usuário já está em uso.")
+                # Validar força da senha
+                senha_valida, mensagem = validar_senha_forte(new_password)
+                if not senha_valida:
+                    st.error(mensagem)
                 else:
-                    usuarios[new_username] = {
-                        "senha": new_password,
-                        "cursos_concluidos": [],
-                        "acessos": 0,
-                        "data_cadastro": datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-                    }
-                    salvar_usuarios(usuarios)
-                    st.success("Cadastro realizado com sucesso! Faça login para continuar.")
+                    usuarios = carregar_usuarios()
+                    if new_username in usuarios:
+                        st.error("Este nome de usuário já está em uso.")
+                    else:
+                        usuarios[new_username] = {
+                            "senha": new_password,
+                            "cursos_concluidos": [],
+                            "acessos": 0,
+                            "data_cadastro": datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+                        }
+                        salvar_usuarios(usuarios)
+                        st.success("Cadastro realizado com sucesso! Faça login para continuar.")
 
 # Função para mostrar a página de seleção de cursos
 def mostrar_cursos():
