@@ -132,112 +132,112 @@ cursos = {
             }
         ]
     },
-    "Navegação em Rede Social": {
-        "video": "https://www.youtube.com/watch?v=6vDF-yje5mE",
+    "Cybersegurança": {
+        "video": "https://www.youtube.com/watch?v=inWWhr5nEAo",
         "perguntas": [
             {
-                "pergunta": "O que é uma rede social?",
-                "opcoes": ["Um tipo de cabo de internet", "Uma plataforma para conectar pessoas online", "Um programa antivírus", "Um tipo de computador"],
+                "pergunta": "O que é um firewall?",
+                "opcoes": ["Um programa antivírus", "Uma barreira de segurança que controla o tráfego de rede", "Um tipo de vírus", "Um programa de edição de texto"],
                 "resposta_correta": 1
             },
             {
-                "pergunta": "Qual destas é uma rede social?",
-                "opcoes": ["Microsoft Word", "Google Chrome", "Instagram", "Windows"],
-                "resposta_correta": 2
-            },
-            {
-                "pergunta": "O que é um 'post' em redes sociais?",
-                "opcoes": ["Um cargo em uma empresa", "Uma publicação feita por um usuário", "Um tipo de vírus", "Um dispositivo de hardware"],
+                "pergunta": "O que é phishing?",
+                "opcoes": ["Um tipo de pesca", "Uma técnica de engenharia social para roubar dados", "Um programa antivírus", "Um tipo de hardware"],
                 "resposta_correta": 1
             },
             {
-                "pergunta": "O que significa 'compartilhar' em redes sociais?",
-                "opcoes": ["Excluir um conteúdo", "Repassar o conteúdo de outra pessoa para seus seguidores", "Bloquear um usuário", "Desativar sua conta"],
+                "pergunta": "O que é criptografia?",
+                "opcoes": ["Um tipo de vírus", "Uma técnica para proteger informações convertendo-as em código", "Um programa de edição de imagens", "Um tipo de hardware"],
                 "resposta_correta": 1
             },
             {
-                "pergunta": "O que é um 'perfil' em uma rede social?",
-                "opcoes": ["Um tipo de vírus", "A página pessoal de um usuário", "Um programa de computador", "Um tipo de conexão de internet"],
+                "pergunta": "O que é um ataque DDoS?",
+                "opcoes": ["Um tipo de vírus", "Um ataque que sobrecarrega um servidor com tráfego", "Um programa antivírus", "Um tipo de hardware"],
                 "resposta_correta": 1
             },
             {
-                "pergunta": "O que é 'privacidade' em redes sociais?",
-                "opcoes": ["Um tipo de postagem", "Configurações que controlam quem pode ver seu conteúdo", "Um aplicativo de mensagens", "Um tipo de conexão"],
+                "pergunta": "O que é autenticação de dois fatores?",
+                "opcoes": ["Um tipo de vírus", "Um método de segurança que requer duas formas de verificação", "Um programa antivírus", "Um tipo de hardware"],
                 "resposta_correta": 1
             },
             {
-                "pergunta": "O que é um 'story' no Instagram?",
-                "opcoes": ["Um livro digital", "Uma publicação temporária que desaparece após 24 horas", "Um tipo de vírus", "Um perfil falso"],
+                "pergunta": "O que é um malware?",
+                "opcoes": ["Um programa antivírus", "Um software malicioso", "Um tipo de hardware", "Um programa de edição de texto"],
                 "resposta_correta": 1
             },
             {
-                "pergunta": "O que significa 'seguir' alguém em uma rede social?",
-                "opcoes": ["Perseguir fisicamente", "Espionar ilegalmente", "Assinar atualizações do conteúdo de um usuário", "Bloquear um usuário"],
-                "resposta_correta": 2
-            },
-            {
-                "pergunta": "O que é 'fake news'?",
-                "opcoes": ["Notícias importantes", "Notícias falsas ou enganosas", "Um tipo de rede social", "Um aplicativo de notícias"],
+                "pergunta": "O que é uma VPN?",
+                "opcoes": ["Um tipo de vírus", "Uma rede privada virtual que protege sua conexão", "Um programa antivírus", "Um tipo de hardware"],
                 "resposta_correta": 1
             },
             {
-                "pergunta": "O que é um 'meme' na internet?",
-                "opcoes": ["Um tipo de vírus", "Um conteúdo humorístico que se espalha rapidamente", "Um programa de computador", "Um tipo de hardware"],
+                "pergunta": "O que é um backup?",
+                "opcoes": ["Um tipo de vírus", "Uma cópia de segurança dos dados", "Um programa antivírus", "Um tipo de hardware"],
+                "resposta_correta": 1
+            },
+            {
+                "pergunta": "O que é um patch de segurança?",
+                "opcoes": ["Um tipo de vírus", "Uma atualização que corrige vulnerabilidades", "Um programa antivírus", "Um tipo de hardware"],
+                "resposta_correta": 1
+            },
+            {
+                "pergunta": "O que é engenharia social?",
+                "opcoes": ["Um tipo de vírus", "Manipulação psicológica para obter informações", "Um programa antivírus", "Um tipo de hardware"],
                 "resposta_correta": 1
             }
         ]
     },
-    "Informática para Negócios": {
-        "video": "https://www.youtube.com/watch?v=txvA9aMTSgU",
+    "Lógica de Programação em Python": {
+        "video": "https://www.youtube.com/watch?v=S9uPNppGsGo",
         "perguntas": [
             {
-                "pergunta": "O que é um CRM?",
-                "opcoes": ["Um tipo de computador", "Um sistema de gerenciamento de relacionamento com clientes", "Um tipo de rede social", "Um dispositivo de hardware"],
+                "pergunta": "O que é uma variável em Python?",
+                "opcoes": ["Um tipo de vírus", "Um local para armazenar dados", "Um programa antivírus", "Um tipo de hardware"],
                 "resposta_correta": 1
             },
             {
-                "pergunta": "Qual destes é um exemplo de software para planilhas?",
-                "opcoes": ["Microsoft Word", "Microsoft Excel", "PowerPoint", "Internet Explorer"],
+                "pergunta": "O que é um loop em programação?",
+                "opcoes": ["Um tipo de vírus", "Uma estrutura que repete um bloco de código", "Um programa antivírus", "Um tipo de hardware"],
                 "resposta_correta": 1
             },
             {
-                "pergunta": "O que é um ERP?",
-                "opcoes": ["Um tipo de computador", "Um sistema de planejamento de recursos empresariais", "Um tipo de rede social", "Um dispositivo de hardware"],
+                "pergunta": "O que é uma função em Python?",
+                "opcoes": ["Um tipo de vírus", "Um bloco de código reutilizável", "Um programa antivírus", "Um tipo de hardware"],
                 "resposta_correta": 1
             },
             {
-                "pergunta": "O que é e-commerce?",
-                "opcoes": ["Um tipo de vírus", "Comércio eletrônico", "Um programa de computador", "Um tipo de hardware"],
+                "pergunta": "O que é uma condicional em Python?",
+                "opcoes": ["Um tipo de vírus", "Uma estrutura que executa código baseado em condições", "Um programa antivírus", "Um tipo de hardware"],
                 "resposta_correta": 1
             },
             {
-                "pergunta": "O que é marketing digital?",
-                "opcoes": ["Um tipo de computador", "Estratégias de marketing que utilizam meios digitais", "Um tipo de rede social", "Um dispositivo de hardware"],
+                "pergunta": "O que é uma lista em Python?",
+                "opcoes": ["Um tipo de vírus", "Uma estrutura de dados ordenada", "Um programa antivírus", "Um tipo de hardware"],
                 "resposta_correta": 1
             },
             {
-                "pergunta": "O que é um banco de dados?",
-                "opcoes": ["Um local físico onde se guarda dinheiro", "Uma coleção organizada de informações", "Um tipo de rede social", "Um dispositivo de hardware"],
+                "pergunta": "O que é um dicionário em Python?",
+                "opcoes": ["Um tipo de vírus", "Uma estrutura de dados com chave-valor", "Um programa antivírus", "Um tipo de hardware"],
                 "resposta_correta": 1
             },
             {
-                "pergunta": "O que é uma videoconferência?",
-                "opcoes": ["Um tipo de vírus", "Uma reunião realizada por vídeo entre pessoas em locais diferentes", "Um programa de computador", "Um tipo de hardware"],
+                "pergunta": "O que é um módulo em Python?",
+                "opcoes": ["Um tipo de vírus", "Um arquivo contendo código Python reutilizável", "Um programa antivírus", "Um tipo de hardware"],
                 "resposta_correta": 1
             },
             {
-                "pergunta": "O que é um backup empresarial?",
-                "opcoes": ["Um funcionário substituto", "Uma cópia de segurança dos dados da empresa", "Um tipo de rede social", "Um dispositivo de hardware"],
+                "pergunta": "O que é uma exceção em Python?",
+                "opcoes": ["Um tipo de vírus", "Um erro que ocorre durante a execução do programa", "Um programa antivírus", "Um tipo de hardware"],
                 "resposta_correta": 1
             },
             {
-                "pergunta": "O que é computação em nuvem?",
-                "opcoes": ["Usar computadores em dias chuvosos", "Utilizar serviços de armazenamento e processamento pela internet", "Um tipo de rede social", "Um dispositivo de hardware"],
+                "pergunta": "O que é um método em Python?",
+                "opcoes": ["Um tipo de vírus", "Uma função associada a um objeto", "Um programa antivírus", "Um tipo de hardware"],
                 "resposta_correta": 1
             },
             {
-                "pergunta": "O que é um firewall?",
-                "opcoes": ["Um tipo de vírus", "Um sistema de segurança que controla o tráfego de rede", "Um programa de computador para edição de imagens", "Um tipo de hardware"],
+                "pergunta": "O que é uma classe em Python?",
+                "opcoes": ["Um tipo de vírus", "Um modelo para criar objetos", "Um programa antivírus", "Um tipo de hardware"],
                 "resposta_correta": 1
             }
         ]
@@ -370,7 +370,7 @@ def mostrar_cursos():
             st.rerun()
     
     with col2:
-        curso = "Navegação em Rede Social"
+        curso = "Cybersegurança"
         concluido = curso in cursos_concluidos
         st.write(f"### {curso}")
         if concluido:
@@ -383,7 +383,7 @@ def mostrar_cursos():
             st.rerun()
     
     with col3:
-        curso = "Informática para Negócios"
+        curso = "Lógica de Programação em Python"
         concluido = curso in cursos_concluidos
         st.write(f"### {curso}")
         if concluido:
