@@ -78,7 +78,7 @@ def validar_senha_forte(senha):
 # Informações dos cursos
 cursos = {
     "Introdução à Informática": {
-        "video": "https://www.youtube.com/watch?v=iuKDGWjIuzA",
+        "video": "https://www.youtube.com/watch?v=HhqE8wzJWdw",
         "perguntas": [
             {
                 "pergunta": "O que é um sistema operacional?",
@@ -133,7 +133,7 @@ cursos = {
         ]
     },
     "Cybersegurança": {
-        "video": "https://www.youtube.com/watch?v=inWWhr5nEAo",
+        "video": "https://www.youtube.com/watch?v=ltFdyFqjXvY",
         "perguntas": [
             {
                 "pergunta": "O que é um firewall?",
@@ -188,7 +188,7 @@ cursos = {
         ]
     },
     "Lógica de Programação em Python": {
-        "video": "https://www.youtube.com/watch?v=S9uPNppGsGo",
+        "video": "https://www.youtube.com/watch?v=nIHq1MtJaKs",
         "perguntas": [
             {
                 "pergunta": "O que é uma variável em Python?",
