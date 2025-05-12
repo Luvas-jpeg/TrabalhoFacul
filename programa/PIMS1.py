@@ -133,7 +133,7 @@ cursos = {
         ]
     },
     "Cybersegurança": {
-        "video": "https://www.youtube.com/playlist?list=PLHz_AreHm4dlaTyjolzCFC6IjLzO8O0XV",
+        "video": "https://www.youtube.com/watch?v=KvPtIl-Gz2E&list=PLHz_AreHm4dlaTyjolzCFC6IjLzO8O0XV&index=1",
         "perguntas": [
             {
                 "pergunta": "Qual é a principal finalidade da segurança da informação no contexto de ambientes digitais?",
@@ -238,56 +238,106 @@ cursos = {
         ]
     },
     "Lógica de Programação em Python": {
-        "video": "https://www.youtube.com/watch?v=nIHq1MtJaKs",
+        "video": "https://www.youtube.com/watch?v=pv1XzosXVQc&list=PLQpSyz5rZmJpFVb1TidOflNMcVnpDdzAn&index=5",
         "perguntas": [
             {
-                "pergunta": "O que é uma variável em Python?",
-                "opcoes": ["Um tipo de vírus", "Um local para armazenar dados", "Um programa antivírus", "Um tipo de hardware"],
+                "pergunta": "Em contextos que exigem tomada de decisão programática, qual estrutura lógica em Python permite múltiplos fluxos alternativos de execução com base em diferentes condições booleanas avaliadas sequencialmente?",
+                "opcoes": [
+                    "Estrutura de repetição for",
+                    "Bloco condicional encadeado com if, elif, else",
+                    "Definição de função com def",
+                    "List comprehension"
+                ],
                 "resposta_correta": 1
             },
             {
-                "pergunta": "O que é um loop em programação?",
-                "opcoes": ["Um tipo de vírus", "Uma estrutura que repete um bloco de código", "Um programa antivírus", "Um tipo de hardware"],
+                "pergunta": "Dado o código abaixo, qual será a saída, e por quê?\n\nx = 4\ny = 2\nif x % y:\n    print('Ímpar')\nelse:\n    print('Par')",
+                "opcoes": [
+                    "Par — pois o resto da divisão é zero",
+                    "Ímpar — porque 4 é um número par",
+                    "Par — porque x é múltiplo de y",
+                    "Ímpar — pois if x % y: avalia True"
+                ],
+                "resposta_correta": 0
+            },
+            {
+                "pergunta": "No contexto de iteração sobre sequências numéricas, qual das instruções abaixo produzirá exatamente três iterações com os valores 3, 5 e 7?",
+                "opcoes": [
+                    "range(3, 8)",
+                    "range(3, 8, 2)",
+                    "range(3, 7, 3)",
+                    "range(3, 7, 1)"
+                ],
                 "resposta_correta": 1
             },
             {
-                "pergunta": "O que é uma função em Python?",
-                "opcoes": ["Um tipo de vírus", "Um bloco de código reutilizável", "Um programa antivírus", "Um tipo de hardware"],
+                "pergunta": "Considerando a manipulação de fluxos de controle em laços, qual a principal diferença conceitual entre os comandos continue e break dentro de um for loop em Python?",
+                "opcoes": [
+                    "Ambos terminam a execução do programa",
+                    "break encerra o loop; continue pula apenas a iteração atual",
+                    "continue é usado apenas com while; break, apenas com for",
+                    "continue interrompe o loop e retorna um valor"
+                ],
                 "resposta_correta": 1
             },
             {
-                "pergunta": "O que é uma condicional em Python?",
-                "opcoes": ["Um tipo de vírus", "Uma estrutura que executa código baseado em condições", "Um programa antivírus", "Um tipo de hardware"],
+                "pergunta": "Analise o trecho de código abaixo. O que será impresso ao final da execução?\n\nfor i in range(1, 4):\n    for j in range(1, 3):\n        print(i * j, end=' ')",
+                "opcoes": [
+                    "1 2 2 4 3 6",
+                    "1 1 2 2 3 3",
+                    "1 2 3 4 5 6",
+                    "1 2 3 1 2 3"
+                ],
+                "resposta_correta": 0
+            },
+            {
+                "pergunta": "Em Python, uma função definida como def saudacao(): print('Oi') retorna qual valor ao ser chamada como x = saudacao() e depois print(x)?",
+                "opcoes": [
+                    "'Oi'",
+                    "None",
+                    "Erro de tipo",
+                    "A função em si"
+                ],
                 "resposta_correta": 1
             },
             {
-                "pergunta": "O que é uma lista em Python?",
-                "opcoes": ["Um tipo de vírus", "Uma estrutura de dados ordenada", "Um programa antivírus", "Um tipo de hardware"],
+                "pergunta": "Considerando funções como abstrações reutilizáveis, qual vantagem prática mais significativa do uso de parâmetros com valores padrão (def func(x=10)) no desenvolvimento de sistemas?",
+                "opcoes": [
+                    "Reduz a legibilidade do código",
+                    "Elimina a necessidade de argumentos",
+                    "Permite flexibilidade na chamada da função",
+                    "Impede a modificação de variáveis locais"
+                ],
+                "resposta_correta": 2
+            },
+            {
+                "pergunta": "Suponha a função abaixo. Qual será a saída de f(3)?\n\ndef f(x):\n    if x <= 1:\n        return 1\n    return x * f(x - 1)",
+                "opcoes": [
+                    "3",
+                    "6",
+                    "1",
+                    "Erro de recursão"
+                ],
                 "resposta_correta": 1
             },
             {
-                "pergunta": "O que é um dicionário em Python?",
-                "opcoes": ["Um tipo de vírus", "Uma estrutura de dados com chave-valor", "Um programa antivírus", "Um tipo de hardware"],
-                "resposta_correta": 1
+                "pergunta": "Qual das seguintes alternativas é verdadeira sobre a comparação entre operadores lógicos and e or em expressões booleanas em Python?",
+                "opcoes": [
+                    "Ambos retornam apenas True ou False",
+                    "and retorna o primeiro operando True; or retorna o último False",
+                    "and retorna o último valor avaliado se todos forem verdadeiros",
+                    "or sempre retorna False se qualquer operando for False"
+                ],
+                "resposta_correta": 2
             },
             {
-                "pergunta": "O que é um módulo em Python?",
-                "opcoes": ["Um tipo de vírus", "Um arquivo contendo código Python reutilizável", "Um programa antivírus", "Um tipo de hardware"],
-                "resposta_correta": 1
-            },
-            {
-                "pergunta": "O que é uma exceção em Python?",
-                "opcoes": ["Um tipo de vírus", "Um erro que ocorre durante a execução do programa", "Um programa antivírus", "Um tipo de hardware"],
-                "resposta_correta": 1
-            },
-            {
-                "pergunta": "O que é um método em Python?",
-                "opcoes": ["Um tipo de vírus", "Uma função associada a um objeto", "Um programa antivírus", "Um tipo de hardware"],
-                "resposta_correta": 1
-            },
-            {
-                "pergunta": "O que é uma classe em Python?",
-                "opcoes": ["Um tipo de vírus", "Um modelo para criar objetos", "Um programa antivírus", "Um tipo de hardware"],
+                "pergunta": "Dada a string texto = 'Lógica de Programação', qual das expressões retorna a substring 'Prog'?",
+                "opcoes": [
+                    "texto[9:13]",
+                    "texto[10:14]",
+                    "texto[11:15]",
+                    "texto[9:14]"
+                ],
                 "resposta_correta": 1
             }
         ]
