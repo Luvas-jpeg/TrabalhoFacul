@@ -133,57 +133,107 @@ cursos = {
         ]
     },
     "Cybersegurança": {
-        "video": "https://www.youtube.com/watch?v=ltFdyFqjXvY",
+        "video": "https://www.youtube.com/playlist?list=PLHz_AreHm4dlaTyjolzCFC6IjLzO8O0XV",
         "perguntas": [
             {
-                "pergunta": "O que é um firewall?",
-                "opcoes": ["Um programa antivírus", "Uma barreira de segurança que controla o tráfego de rede", "Um tipo de vírus", "Um programa de edição de texto"],
+                "pergunta": "Qual é a principal finalidade da segurança da informação no contexto de ambientes digitais?",
+                "opcoes": [
+                    "Proporcionar anonimato absoluto durante a navegação na internet.",
+                    "Minimizar os impactos de falhas técnicas por meio de redundância operacional.",
+                    "Estabelecer uma estrutura de proteção que assegure os ativos informacionais quanto à confidencialidade, integridade e disponibilidade.",
+                    "Viabilizar o uso de recursos computacionais com desempenho e acessibilidade otimizados."
+                ],
+                "resposta_correta": 2
+            },
+            {
+                "pergunta": "No arcabouço da segurança da informação, os pilares de confidencialidade, integridade e disponibilidade são conhecidos como:",
+                "opcoes": [
+                    "Princípios de consistência algorítmica.",
+                    "Elementos centrais do gerenciamento de riscos de TI.",
+                    "Fundamentos da tríade CIA, que norteia as boas práticas de proteção de dados.",
+                    "Componentes da arquitetura lógica de segurança em redes públicas."
+                ],
+                "resposta_correta": 2
+            },
+            {
+                "pergunta": "No contexto da proteção de dados, a criptografia assimétrica difere da simétrica porque:",
+                "opcoes": [
+                    "Permite a autenticação mútua entre as partes através de tokens digitais temporários.",
+                    "Utiliza uma chave pública para criptografar e uma chave privada correspondente para descriptografar, assegurando comunicação segura.",
+                    "Garante maior velocidade de transmissão em conexões peer-to-peer.",
+                    "Reduz a necessidade de troca de chaves criptográficas entre os interlocutores."
+                ],
                 "resposta_correta": 1
             },
             {
-                "pergunta": "O que é phishing?",
-                "opcoes": ["Um tipo de pesca", "Uma técnica de engenharia social para roubar dados", "Um programa antivírus", "Um tipo de hardware"],
+                "pergunta": "Em relação à criação de credenciais seguras, qual prática representa uma abordagem resiliente contra ataques de força bruta?",
+                "opcoes": [
+                    "Adotar expressões memorizáveis com substituições visuais (ex: \"S3gur@!\").",
+                    "Manter um padrão de senhas similar em múltiplos serviços para facilitar a memorização.",
+                    "Empregar geradores de senhas baseados em padrões predefinidos e previsíveis.",
+                    "Construir senhas longas com entropia elevada, evitando reutilização e aplicando critérios alfanuméricos e simbólicos."
+                ],
+                "resposta_correta": 3
+            },
+            {
+                "pergunta": "A engenharia social, dentro do escopo das ameaças cibernéticas, pode ser caracterizada como:",
+                "opcoes": [
+                    "Um processo técnico que explora vulnerabilidades em protocolos criptográficos.",
+                    "Uma forma de coleta automatizada de dados a partir de sistemas expostos na rede.",
+                    "Uma tática de persuasão que visa explorar fragilidades humanas para induzir ao fornecimento de informações sensíveis.",
+                    "Uma metodologia de segmentação de perfis com base em análise de comportamento digital."
+                ],
+                "resposta_correta": 2
+            },
+            {
+                "pergunta": "Assinale a alternativa que melhor descreve a funcionalidade de softwares maliciosos (malwares):",
+                "opcoes": [
+                    "Aplicações legítimas modificadas para rastrear o comportamento do usuário para fins comerciais.",
+                    "Conjuntos de rotinas implementadas com a intenção deliberada de comprometer a segurança, a integridade ou a confidencialidade dos sistemas afetados.",
+                    "Ferramentas utilizadas exclusivamente por cibercriminosos para fins de espionagem estatal.",
+                    "Extensões de navegadores que interferem no desempenho do sistema operacional."
+                ],
                 "resposta_correta": 1
             },
             {
-                "pergunta": "O que é criptografia?",
-                "opcoes": ["Um tipo de vírus", "Uma técnica para proteger informações convertendo-as em código", "Um programa de edição de imagens", "Um tipo de hardware"],
-                "resposta_correta": 1
+                "pergunta": "O ataque conhecido como phishing geralmente se vale de quais estratégias para capturar dados sensíveis?",
+                "opcoes": [
+                    "Manipulação de variáveis ambientais em dispositivos IoT.",
+                    "Distribuição de malwares embutidos em bibliotecas de código aberto.",
+                    "Comunicação fraudulenta, geralmente por e-mail ou mensagens, que simula instituições legítimas com o objetivo de obter credenciais ou dados pessoais.",
+                    "Criação de sites espelho que operam em protocolos criptográficos inválidos."
+                ],
+                "resposta_correta": 2
             },
             {
-                "pergunta": "O que é um ataque DDoS?",
-                "opcoes": ["Um tipo de vírus", "Um ataque que sobrecarrega um servidor com tráfego", "Um programa antivírus", "Um tipo de hardware"],
-                "resposta_correta": 1
+                "pergunta": "A manutenção da integridade e segurança de sistemas operacionais é fortemente dependente de:",
+                "opcoes": [
+                    "Recompilação do kernel e desativação de serviços de rede pouco utilizados.",
+                    "Análise contínua de logs de acesso e políticas de conformidade.",
+                    "Instalação regular de atualizações e correções de segurança fornecidas pelo fabricante.",
+                    "Criação de imagens de disco para recuperação em caso de falha física."
+                ],
+                "resposta_correta": 2
             },
             {
-                "pergunta": "O que é autenticação de dois fatores?",
-                "opcoes": ["Um tipo de vírus", "Um método de segurança que requer duas formas de verificação", "Um programa antivírus", "Um tipo de hardware"],
-                "resposta_correta": 1
+                "pergunta": "Uma medida fundamental para assegurar a proteção de redes domésticas sem fio consiste em:",
+                "opcoes": [
+                    "Alterar o SSID para um nome genérico, reduzindo a exposição de informações pessoais.",
+                    "Ativar o filtro de endereços MAC para impedir a conexão de dispositivos não autorizados.",
+                    "Utilizar criptografia WPA2 ou WPA3 e senhas com alta complexidade, além de configurar o roteador com parâmetros de segurança atualizados.",
+                    "Desabilitar o DHCP para limitar a atribuição automática de IPs."
+                ],
+                "resposta_correta": 2
             },
             {
-                "pergunta": "O que é um malware?",
-                "opcoes": ["Um programa antivírus", "Um software malicioso", "Um tipo de hardware", "Um programa de edição de texto"],
-                "resposta_correta": 1
-            },
-            {
-                "pergunta": "O que é uma VPN?",
-                "opcoes": ["Um tipo de vírus", "Uma rede privada virtual que protege sua conexão", "Um programa antivírus", "Um tipo de hardware"],
-                "resposta_correta": 1
-            },
-            {
-                "pergunta": "O que é um backup?",
-                "opcoes": ["Um tipo de vírus", "Uma cópia de segurança dos dados", "Um programa antivírus", "Um tipo de hardware"],
-                "resposta_correta": 1
-            },
-            {
-                "pergunta": "O que é um patch de segurança?",
-                "opcoes": ["Um tipo de vírus", "Uma atualização que corrige vulnerabilidades", "Um programa antivírus", "Um tipo de hardware"],
-                "resposta_correta": 1
-            },
-            {
-                "pergunta": "O que é engenharia social?",
-                "opcoes": ["Um tipo de vírus", "Manipulação psicológica para obter informações", "Um programa antivírus", "Um tipo de hardware"],
-                "resposta_correta": 1
+                "pergunta": "A autenticação multifatorial (MFA) é um mecanismo de segurança que:",
+                "opcoes": [
+                    "Emprega biometria como única forma de identificação do usuário.",
+                    "Introduz múltiplos estágios de autenticação baseados exclusivamente em senhas sequenciais.",
+                    "Combina elementos distintos (conhecimento, posse, herança) para garantir robustez contra acessos indevidos.",
+                    "Se aplica apenas em ambientes corporativos com sistemas legados."
+                ],
+                "resposta_correta": 2
             }
         ]
     },
