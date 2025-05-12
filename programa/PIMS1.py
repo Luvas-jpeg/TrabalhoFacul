@@ -78,57 +78,107 @@ def validar_senha_forte(senha):
 # Informações dos cursos
 cursos = {
     "Introdução à Informática": {
-        "video": "https://www.youtube.com/watch?v=HhqE8wzJWdw",
+        "video": "https://www.youtube.com/watch?v=9fNHAD7ZDL4&list=PL-QAz5R5Rlm7wn20xLTIr84gbS2XkzqEZ",
         "perguntas": [
             {
-                "pergunta": "O que é um sistema operacional?",
-                "opcoes": ["Um programa para editar textos", "Um software que gerencia os recursos do computador", "Um dispositivo de hardware", "Um tipo de vírus"],
-                "resposta_correta": 1
-            },
-            {
-                "pergunta": "Qual destes é um dispositivo de entrada?",
-                "opcoes": ["Monitor", "Impressora", "Teclado", "Caixa de som"],
-                "resposta_correta": 2
-            },
-            {
-                "pergunta": "O que significa a sigla CPU?",
-                "opcoes": ["Central Processing Unit", "Computer Personal Unit", "Control Processing Unit", "Central Personal Unit"],
+                "pergunta": "Qual é a principal função de um sistema operacional em um computador?",
+                "opcoes": [
+                    "Gerenciar a comunicação entre o usuário e o hardware, alocando recursos e garantindo a execução dos programas.",
+                    "Organizar os arquivos e pastas do computador sem interação com o hardware.",
+                    "Controlar a instalação de aplicativos e monitorar o uso de memória RAM.",
+                    "Proteger o computador contra ataques de vírus e malware."
+                ],
                 "resposta_correta": 0
             },
             {
-                "pergunta": "Qual é a função principal da memória RAM?",
-                "opcoes": ["Armazenar dados permanentemente", "Processar informações", "Armazenar dados temporariamente durante o uso", "Conectar o computador à internet"],
-                "resposta_correta": 2
-            },
-            {
-                "pergunta": "O que é um arquivo PDF?",
-                "opcoes": ["Um tipo de vírus", "Um formato de documento portátil", "Um programa de edição de imagens", "Um sistema operacional"],
+                "pergunta": "Em um sistema operacional, o que é um diretório?",
+                "opcoes": [
+                    "Uma ferramenta de compactação de arquivos.",
+                    "Uma estrutura que armazena e organiza arquivos e pastas dentro do sistema de arquivos.",
+                    "Um arquivo que armazena o histórico de navegação.",
+                    "Uma pasta de arquivos temporários do sistema operacional."
+                ],
                 "resposta_correta": 1
             },
             {
-                "pergunta": "Qual destes é um exemplo de software?",
-                "opcoes": ["Mouse", "Teclado", "Microsoft Word", "Impressora"],
-                "resposta_correta": 2
-            },
-            {
-                "pergunta": "O que é um navegador web?",
-                "opcoes": ["Um dispositivo para conectar à internet", "Um programa para acessar páginas na internet", "Um tipo de vírus", "Um sistema operacional"],
+                "pergunta": "Qual é a principal diferença entre os sistemas operacionais Windows e Linux?",
+                "opcoes": [
+                    "O Windows oferece mais opções de personalização, enquanto o Linux é mais seguro e estável.",
+                    "O Windows é proprietário e mais utilizado para uso pessoal, enquanto o Linux é de código aberto e mais utilizado em servidores.",
+                    "O Linux não tem uma interface gráfica, enquanto o Windows tem uma interface totalmente gráfica.",
+                    "Ambos têm a mesma funcionalidade, mas o Windows tem mais suporte a dispositivos."
+                ],
                 "resposta_correta": 1
             },
             {
-                "pergunta": "Qual é a função principal de um antivírus?",
-                "opcoes": ["Acelerar a conexão com a internet", "Proteger o computador contra ameaças digitais", "Editar documentos", "Armazenar arquivos"],
+                "pergunta": "O que significa a sigla 'URL'?",
+                "opcoes": [
+                    "Uniform Resource Locator, que é a forma padronizada de localizar um recurso na internet.",
+                    "Universal Resource Locator, uma ferramenta usada para localizar recursos de rede.",
+                    "Uniform Retrieval Locator, uma forma de acessar arquivos dentro de um servidor.",
+                    "Universal Retrieval Locator, um tipo de protocolo usado para recuperar arquivos."
+                ],
+                "resposta_correta": 0
+            },
+            {
+                "pergunta": "Qual é a principal função de um navegador de internet?",
+                "opcoes": [
+                    "Estabelecer uma conexão segura entre o usuário e os sites acessados.",
+                    "Interpretar e exibir páginas web, permitindo acesso a sites e conteúdos na internet.",
+                    "Proteger o computador contra vírus durante a navegação.",
+                    "Gerenciar arquivos no computador e otimizar o desempenho do sistema."
+                ],
                 "resposta_correta": 1
             },
             {
-                "pergunta": "O que é um backup?",
-                "opcoes": ["Um tipo de vírus", "Uma cópia de segurança dos dados", "Um programa de edição de imagens", "Um dispositivo de hardware"],
+                "pergunta": "O que é um arquivo compactado?",
+                "opcoes": [
+                    "Um arquivo que ocupa menos espaço no disco e pode ser restaurado para seu estado original.",
+                    "Um arquivo temporário usado apenas durante a execução de programas.",
+                    "Um arquivo que contém apenas dados de imagens.",
+                    "Um arquivo criptografado que exige uma chave para ser acessado."
+                ],
+                "resposta_correta": 0
+            },
+            {
+                "pergunta": "Qual é a principal função de um programa antivírus?",
+                "opcoes": [
+                    "Detectar e bloquear programas que afetam o desempenho do computador.",
+                    "Proteger o computador contra vírus e outras ameaças, como malwares e trojans.",
+                    "Monitorar e otimizar o uso de memória do computador.",
+                    "Impedir o acesso a sites maliciosos durante a navegação."
+                ],
                 "resposta_correta": 1
             },
             {
-                "pergunta": "Qual destes é um exemplo de hardware?",
-                "opcoes": ["Windows", "Microsoft Word", "Mouse", "Internet Explorer"],
-                "resposta_correta": 2
+                "pergunta": "O que é uma planilha eletrônica?",
+                "opcoes": [
+                    "Um programa usado para criar apresentações de slides.",
+                    "Uma ferramenta para organizar, calcular e analisar dados em tabelas.",
+                    "Um programa para criar documentos de texto.",
+                    "Uma aplicação para criar e gerenciar gráficos e diagramas."
+                ],
+                "resposta_correta": 1
+            },
+            {
+                "pergunta": "Qual é a principal vantagem de utilizar a nuvem para armazenar arquivos?",
+                "opcoes": [
+                    "A nuvem oferece um acesso rápido aos arquivos, mas eles ficam menos seguros.",
+                    "A nuvem permite acessar arquivos de qualquer lugar com uma conexão à internet, sem ocupar espaço no computador.",
+                    "A nuvem não requer conexão com a internet para acessar os arquivos.",
+                    "A nuvem é uma forma de proteger os dados contra vírus, mas não permite fazer backup de arquivos."
+                ],
+                "resposta_correta": 1
+            },
+            {
+                "pergunta": "O que é um sistema de gerenciamento de banco de dados (SGBD)?",
+                "opcoes": [
+                    "Um sistema que organiza dados em tabelas, permitindo a consulta e manipulação de informações de forma eficiente.",
+                    "Uma ferramenta para armazenar dados de vídeos e imagens.",
+                    "Um sistema que realiza backups automáticos de todos os arquivos do computador.",
+                    "Um programa que gerencia e organiza arquivos de texto e gráficos."
+                ],
+                "resposta_correta": 0
             }
         ]
     },
@@ -602,10 +652,18 @@ def mostrar_resultado():
             st.session_state.pagina = "atividades"
             st.rerun()
     
-    if st.button("Voltar para Cursos"):
-        st.session_state.curso_atual = None
-        st.session_state.pagina = "cursos"
-        st.rerun()
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        if st.button("Voltar para Cursos"):
+            st.session_state.curso_atual = None
+            st.session_state.pagina = "cursos"
+            st.rerun()
+    
+    with col2:
+        if st.button("Voltar para o Menu do Curso"):
+            st.session_state.pagina = "curso"
+            st.rerun()
 
 # Função para mostrar a página de conclusão
 def mostrar_conclusao():
