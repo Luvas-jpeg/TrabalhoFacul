@@ -42,12 +42,7 @@ Sistema de cursos online desenvolvido como Projeto Integrado Multidisciplinar (P
 git clone [URL_DO_REPOSITÓRIO]
 ```
 
-2. Instale as dependências
-```bash
-pip install -r requirements.txt
-```
-
-3. Execute o projeto
+2. Execute o projeto
 ```bash
 streamlit run programa/PIM-1S.py
 ```
