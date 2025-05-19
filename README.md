@@ -134,7 +134,7 @@ As soluções desenvolvidas demonstraram a viabilidade de criar uma plataforma d
 Os conteúdos dos cursos foram desenvolvidos com base em materiais educacionais de alta qualidade disponíveis na plataforma YouTube:
 
 ### Introdução à Informática
-- Canal: Curso em Vídeo
+- Canal: Certificados Cursos Online
 - Playlist: "Curso de Informática Básica"
 - Link: https://www.youtube.com/watch?v=9fNHAD7ZDL4&list=PL-QAz5R5Rlm7wn20xLTIr84gbS2XkzqEZ
 
@@ -144,7 +144,7 @@ Os conteúdos dos cursos foram desenvolvidos com base em materiais educacionais 
 - Link: https://www.youtube.com/watch?v=KvPtIl-Gz2E&list=PLHz_AreHm4dlaTyjolzCFC6IjLzO8O0XV
 
 ### Lógica de Programação em Python
-- Canal: Curso em Vídeo
+- Canal: Joviano Silveira
 - Playlist: "Curso de Python"
 - Link: https://www.youtube.com/watch?v=pv1XzosXVQc&list=PLQpSyz5rZmJpFVb1TidOflNMcVnpDdzAn
 
