@@ -100,11 +100,11 @@ streamlit run programa/PIM-1S.py
 ```
 
 ## Equipe de Desenvolvimento
-- Lucas Vinícios Martins Alves
-- Arthur
-- Luis
-- Luan
-- Vinicius
+- Lucas Vinícios Martins Alves - R6602G9
+- Arthur Lucio Parmezan - H70FDH6
+- Luis Otávio Freitas Faria - R8651C0
+- Luan Alves Magalhães - H659IA0
+- Vinicius 
 - Davi
 
 ## Considerações sobre o Desenvolvimento
@@ -118,6 +118,53 @@ A equipe manteve o controle total sobre as decisões de desenvolvimento e arquit
 
 ## Conclusão
 O projeto demonstra a aplicação prática dos conhecimentos adquiridos no primeiro semestre do curso, resultando em uma solução completa e funcional para ensino a distância. A implementação bem-sucedida das funcionalidades planejadas e a integração das diferentes tecnologias utilizadas comprovam a eficácia da abordagem adotada.
+
+## Considerações Finais
+O desenvolvimento deste projeto proporcionou uma valiosa oportunidade de aplicação prática dos conhecimentos teóricos adquiridos durante o primeiro semestre do curso. A integração de diferentes disciplinas, como programação, banco de dados e interface com usuário, permitiu a criação de uma solução robusta e funcional.
+
+Os principais desafios enfrentados incluíram:
+- Implementação de um sistema de autenticação seguro
+- Desenvolvimento de uma interface intuitiva e responsiva
+- Integração eficiente com recursos externos
+- Garantia de persistência e integridade dos dados
+
+As soluções desenvolvidas demonstraram a viabilidade de criar uma plataforma de ensino a distância com recursos modernos e uma experiência de usuário satisfatória.
+
+## Créditos dos Cursos
+Os conteúdos dos cursos foram desenvolvidos com base em materiais educacionais de alta qualidade disponíveis na plataforma YouTube:
+
+### Introdução à Informática
+- Canal: Curso em Vídeo
+- Playlist: "Curso de Informática Básica"
+- Link: https://www.youtube.com/watch?v=9fNHAD7ZDL4&list=PL-QAz5R5Rlm7wn20xLTIr84gbS2XkzqEZ
+
+### Cybersegurança
+- Canal: Curso em Vídeo
+- Playlist: "Curso de Segurança da Informação"
+- Link: https://www.youtube.com/watch?v=KvPtIl-Gz2E&list=PLHz_AreHm4dlaTyjolzCFC6IjLzO8O0XV
+
+### Lógica de Programação em Python
+- Canal: Curso em Vídeo
+- Playlist: "Curso de Python"
+- Link: https://www.youtube.com/watch?v=pv1XzosXVQc&list=PLQpSyz5rZmJpFVb1TidOflNMcVnpDdzAn
+
+## Referências
+### Bibliografia
+1. SILVA, Maurício Samy. HTML5: A Linguagem de Marcação que Revolucionou a Web. 2. ed. São Paulo: Novatec, 2014.
+2. SOMMERVILLE, Ian. Engenharia de Software. 9. ed. São Paulo: Pearson, 2011.
+3. TANENBAUM, Andrew S. Sistemas Operacionais Modernos. 4. ed. São Paulo: Pearson, 2016.
+
+### Documentação Técnica
+1. Python Software Foundation. Python Documentation. Disponível em: https://docs.python.org/
+2. Streamlit. Streamlit Documentation. Disponível em: https://docs.streamlit.io/
+3. JSON. JSON Documentation. Disponível em: https://www.json.org/
+
+### Ferramentas e Frameworks
+1. Visual Studio Code - Editor de código
+2. Git - Sistema de controle de versão
+3. GitHub - Plataforma de hospedagem de código
+4. Streamlit - Framework para desenvolvimento web
+5. Plotly - Biblioteca para visualização de dados
 
 ## Licença
 Este projeto está sob a licença MIT. Para mais detalhes, consulte o arquivo [LICENSE](LICENSE).
