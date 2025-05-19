@@ -4,6 +4,8 @@ import os
 import webbrowser
 from datetime import datetime
 import re
+import pandas as pd
+import plotly.express as px
 
 # Carregar o arquivo CSS
 def load_css():
@@ -633,6 +635,41 @@ def mostrar_resultado():
         return
     
     st.title(f"Resultado - {st.session_state.curso_atual}")
+    
+    # Criar gráfico de desempenho
+    acertos = st.session_state.pontuacao
+    erros = 10 - acertos
+    
+    # Criar DataFrame para o gráfico
+    df = pd.DataFrame({
+        'Resultado': ['Acertos', 'Erros'],
+        'Quantidade': [acertos, erros]
+    })
+    
+    # Criar gráfico de pizza
+    fig = px.pie(df, values='Quantidade', names='Resultado',
+                 color='Resultado',
+                 color_discrete_map={'Acertos': '#00CC96', 'Erros': '#EF553B'},
+                 title='Distribuição de Acertos e Erros')
+    
+    # Atualizar layout
+    fig.update_layout(
+        title_x=0.5,
+        showlegend=True,
+        legend=dict(
+            orientation="h",
+            yanchor="bottom",
+            y=1.02,
+            xanchor="center",
+            x=0.5
+        )
+    )
+    
+    # Adicionar porcentagens no gráfico
+    fig.update_traces(textposition='inside', textinfo='percent+label')
+    
+    # Exibir gráfico
+    st.plotly_chart(fig, use_container_width=True)
     
     if st.session_state.pontuacao >= 7:
         st.success(f"Parabéns! Você acertou {st.session_state.pontuacao} de 10 questões e concluiu o curso!")
