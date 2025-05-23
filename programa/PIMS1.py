@@ -6,6 +6,8 @@ from datetime import datetime
 import re
 import pandas as pd
 import plotly.express as px
+import base64
+from pathlib import Path
 
 # Carregar o arquivo CSS
 def load_css():
@@ -76,6 +78,36 @@ def validar_senha_forte(senha):
         return False, "A senha deve conter pelo menos um caractere especial (!@#$%^&*(),.?\":{}|<>)"
     
     return True, "Senha válida"
+
+# Função para exibir PDF
+def show_pdf(file_path):
+    with open(file_path, "rb") as f:
+        base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+    
+    # Configuração do container do PDF usando as classes CSS
+    pdf_display = f'''
+    <div class="pdf-container">
+        <iframe 
+            src="data:application/pdf;base64,{base64_pdf}" 
+            class="pdf-iframe"
+            type="application/pdf"
+        ></iframe>
+    </div>
+    '''
+    st.markdown(pdf_display, unsafe_allow_html=True)
+    
+    # Adicionar controles de navegação usando as classes CSS
+    st.markdown("""
+    <div class="pdf-controls">
+        <button onclick="document.querySelector('.pdf-iframe').contentWindow.scrollBy(0, -100)">↑ Subir</button>
+        <button onclick="document.querySelector('.pdf-iframe').contentWindow.scrollBy(0, 100)">↓ Descer</button>
+    </div>
+    """, unsafe_allow_html=True)
+
+# Função para verificar se o PDF existe
+def check_pdf_exists(course_name):
+    pdf_path = Path(f"programa/pdfs/{course_name}.pdf")
+    return pdf_path.exists()
 
 # Informações dos cursos
 cursos = {
@@ -393,6 +425,111 @@ cursos = {
                 "resposta_correta": 1
             }
         ]
+    },
+    "Fake News e Desinformação": {
+        "video": "https://www.camara.leg.br/biblioteca-e-publicacoes/publicacoes-online/area-legislativa/2023/fake-news-e-desinformacao/",
+        "perguntas": [
+            {
+                "pergunta": "O que são Fake News?",
+                "opcoes": [
+                    "Notícias verdadeiras que são mal interpretadas",
+                    "Informações falsas ou enganosas divulgadas como notícias reais",
+                    "Notícias antigas que são republicadas",
+                    "Notícias que não foram verificadas por jornalistas"
+                ],
+                "resposta_correta": 1
+            },
+            {
+                "pergunta": "Qual é a principal característica que diferencia uma Fake News de uma notícia real?",
+                "opcoes": [
+                    "O uso de imagens e vídeos",
+                    "A intenção deliberada de enganar ou manipular",
+                    "A fonte da informação",
+                    "O número de compartilhamentos"
+                ],
+                "resposta_correta": 1
+            },
+            {
+                "pergunta": "Qual das seguintes práticas NÃO é recomendada para identificar Fake News?",
+                "opcoes": [
+                    "Verificar a fonte da informação",
+                    "Compartilhar rapidamente para alertar os outros",
+                    "Consultar sites de fact-checking",
+                    "Analisar a data da publicação"
+                ],
+                "resposta_correta": 1
+            },
+            {
+                "pergunta": "O que é deepfake?",
+                "opcoes": [
+                    "Um tipo de notícia falsa sobre tecnologia",
+                    "Uma técnica de manipulação de áudio e vídeo usando inteligência artificial",
+                    "Um método de verificação de notícias",
+                    "Uma rede social especializada em fake news"
+                ],
+                "resposta_correta": 1
+            },
+            {
+                "pergunta": "Qual é o impacto das Fake News na sociedade?",
+                "opcoes": [
+                    "Apenas afeta a credibilidade de sites de notícias",
+                    "Pode influenciar decisões políticas, econômicas e sociais, causando danos reais",
+                    "Afeta apenas pessoas que não têm acesso à internet",
+                    "Não tem impacto significativo na sociedade moderna"
+                ],
+                "resposta_correta": 1
+            },
+            {
+                "pergunta": "O que é fact-checking?",
+                "opcoes": [
+                    "Um tipo de fake news",
+                    "O processo de verificar a veracidade de informações",
+                    "Uma técnica para criar notícias falsas",
+                    "Um método de censura na internet"
+                ],
+                "resposta_correta": 1
+            },
+            {
+                "pergunta": "Qual das seguintes características é comum em Fake News?",
+                "opcoes": [
+                    "Uso de linguagem formal e técnica",
+                    "Apresentação de múltiplas fontes confiáveis",
+                    "Apelo emocional e manchetes sensacionalistas",
+                    "Citação de especialistas reconhecidos"
+                ],
+                "resposta_correta": 2
+            },
+            {
+                "pergunta": "O que é viés de confirmação no contexto de Fake News?",
+                "opcoes": [
+                    "A tendência de acreditar apenas em notícias de fontes oficiais",
+                    "A tendência de acreditar em informações que confirmam nossas crenças pré-existentes",
+                    "O processo de verificar a veracidade de uma notícia",
+                    "A capacidade de identificar notícias falsas"
+                ],
+                "resposta_correta": 1
+            },
+            {
+                "pergunta": "Qual é a melhor maneira de combater a disseminação de Fake News?",
+                "opcoes": [
+                    "Compartilhar todas as notícias para aumentar a conscientização",
+                    "Desenvolver pensamento crítico e verificar informações antes de compartilhar",
+                    "Ignorar todas as notícias que parecem suspeitas",
+                    "Usar apenas redes sociais para obter informações"
+                ],
+                "resposta_correta": 1
+            },
+            {
+                "pergunta": "O que é desinformação?",
+                "opcoes": [
+                    "Informações verdadeiras que são mal interpretadas",
+                    "Informações falsas ou enganosas divulgadas com intenção de causar dano",
+                    "Notícias antigas republicadas",
+                    "Informações técnicas difíceis de entender"
+                ],
+                "resposta_correta": 1
+            }
+        ]
     }
 }
 
@@ -504,19 +641,30 @@ def mostrar_cursos():
     cursos_concluidos = usuarios[st.session_state.usuario_atual]["cursos_concluidos"]
     
     st.title(f"Boas Vindas, {st.session_state.usuario_atual}!")
-    st.subheader("Escolha um curso para começar:")
     
-    col1, col2, col3 = st.columns(3)
+    # Verificar se todos os cursos obrigatórios foram concluídos
+    cursos_obrigatorios = ["Introdução à Informática", "Cybersegurança", "Lógica de Programação em Python"]
+    cursos_obrigatorios_concluidos = all(curso in cursos_concluidos for curso in cursos_obrigatorios)
+    
+    if cursos_obrigatorios_concluidos:
+        st.success("🎉 Parabéns! Você já concluiu todos os cursos obrigatórios! 🎉")
+        st.info("Você pode refazer qualquer curso para melhorar suas notas ou completar o curso opcional.")
+    
+    # Seção de Cursos Obrigatórios
+    st.markdown("## 📚 Cursos Obrigatórios")
+    st.markdown("Estes são os cursos essenciais para a conclusão do programa.")
+    
+    col1, col2 = st.columns(2)
     
     with col1:
         curso = "Introdução à Informática"
         concluido = curso in cursos_concluidos
-        st.write(f"### {curso}")
+        st.markdown("### 💻 Introdução à Informática")
         if concluido:
             st.success("✅ Concluído")
             nota = usuarios[st.session_state.usuario_atual]["notas"].get(curso, "N/A")
-            st.write(f"Nota anterior: {nota}/10")
-        if st.button("Selecionar", key=curso):
+            st.markdown(f"**Nota anterior:** {nota}/10")
+        if st.button("Selecionar Curso", key=curso):
             st.session_state.curso_atual = curso
             st.session_state.pagina = "curso"
             st.rerun()
@@ -524,35 +672,53 @@ def mostrar_cursos():
     with col2:
         curso = "Cybersegurança"
         concluido = curso in cursos_concluidos
-        st.write(f"### {curso}")
+        st.markdown("### 🔒 Cybersegurança")
         if concluido:
             st.success("✅ Concluído")
             nota = usuarios[st.session_state.usuario_atual]["notas"].get(curso, "N/A")
-            st.write(f"Nota anterior: {nota}/10")
-        if st.button("Selecionar", key=curso):
-            st.session_state.curso_atual = curso
-            st.session_state.pagina = "curso"
-            st.rerun()
-    
-    with col3:
-        curso = "Lógica de Programação em Python"
-        concluido = curso in cursos_concluidos
-        st.write(f"### {curso}")
-        if concluido:
-            st.success("✅ Concluído")
-            nota = usuarios[st.session_state.usuario_atual]["notas"].get(curso, "N/A")
-            st.write(f"Nota anterior: {nota}/10")
-        if st.button("Selecionar", key=curso):
+            st.markdown(f"**Nota anterior:** {nota}/10")
+        if st.button("Selecionar Curso", key=curso):
             st.session_state.curso_atual = curso
             st.session_state.pagina = "curso"
             st.rerun()
     
     st.write("---")
     
-    # Verificar se todos os cursos foram concluídos
-    if len(cursos_concluidos) == 3:
-        st.session_state.pagina = "conclusao"
+    col3, col4 = st.columns(2)
+    
+    with col3:
+        curso = "Lógica de Programação em Python"
+        concluido = curso in cursos_concluidos
+        st.markdown("### 🐍 Lógica de Programação em Python")
+        if concluido:
+            st.success("✅ Concluído")
+            nota = usuarios[st.session_state.usuario_atual]["notas"].get(curso, "N/A")
+            st.markdown(f"**Nota anterior:** {nota}/10")
+        if st.button("Selecionar Curso", key=curso):
+            st.session_state.curso_atual = curso
+            st.session_state.pagina = "curso"
+            st.rerun()
+    
+    st.write("---")
+    
+    # Seção de Cursos Opcionais
+    st.markdown("## 🌟 Cursos Opcionais")
+    st.markdown("Estes cursos complementares não são necessários para a conclusão do programa.")
+    
+    curso = "Fake News e Desinformação"
+    concluido = curso in cursos_concluidos
+    st.markdown("### 📰 Fake News e Desinformação")
+    st.info("Curso Opcional - Conteúdo complementar sobre combate à desinformação")
+    if concluido:
+        st.success("✅ Concluído")
+        nota = usuarios[st.session_state.usuario_atual]["notas"].get(curso, "N/A")
+        st.markdown(f"**Nota anterior:** {nota}/10")
+    if st.button("Selecionar Curso Opcional", key=curso):
+        st.session_state.curso_atual = curso
+        st.session_state.pagina = "curso"
         st.rerun()
+    
+    st.write("---")
     
     # Botão de logout
     if st.button("Sair"):
@@ -570,8 +736,20 @@ def mostrar_curso():
     
     st.title(st.session_state.curso_atual)
     
-    if st.button("Assistir Aula"):
-        webbrowser.open_new_tab(cursos[st.session_state.curso_atual]["video"])
+    # Verificar se existe PDF para o curso
+    if st.session_state.curso_atual == "Fake News e Desinformação":
+        if st.button("Abrir Material do Curso"):
+            try:
+                show_pdf("programa/pdfs/Cartilha-Combate-a-Desinformacao-1 (1) (1).pdf")
+            except Exception as e:
+                st.error(f"Erro ao abrir o PDF: {str(e)}")
+                st.info("Verifique se o arquivo PDF está na pasta correta: programa/pdfs/")
+    elif check_pdf_exists(st.session_state.curso_atual):
+        if st.button("Abrir Material do Curso"):
+            show_pdf(f"programa/pdfs/{st.session_state.curso_atual}.pdf")
+    else:
+        if st.button("Assistir Aula"):
+            webbrowser.open_new_tab(cursos[st.session_state.curso_atual]["video"])
     
     if st.button("Realizar Atividades"):
         st.session_state.respostas = []
@@ -713,9 +891,9 @@ def mostrar_conclusao():
     st.balloons()
     
     st.markdown("""
-    ## 🎊 Você concluiu todos os cursos disponíveis! 🎊
+    ## 🎊 Você concluiu todos os cursos obrigatórios! 🎊
     
-    Você demonstrou dedicação e empenho ao completar todos os nossos cursos.
+    Você demonstrou dedicação e empenho ao completar todos os nossos cursos obrigatórios.
     Esperamos que o conhecimento adquirido seja útil em sua jornada!
     
     ### 🏆 Certificado de Conclusão 🏆
@@ -726,31 +904,48 @@ def mostrar_conclusao():
     st.subheader(f"🌟 {st.session_state.usuario_atual} 🌟")
     
     st.markdown("""
-    Por ter concluído com sucesso todos os cursos da nossa plataforma.
+    Por ter concluído com sucesso todos os cursos obrigatórios da nossa plataforma.
     
     Cursos concluídos:
     """)
     
     usuarios = carregar_usuarios()
     notas = usuarios[st.session_state.usuario_atual]["notas"]
+    cursos_concluidos = usuarios[st.session_state.usuario_atual]["cursos_concluidos"]
     
-    for curso in usuarios[st.session_state.usuario_atual]["cursos_concluidos"]:
-        nota = notas.get(curso, "N/A")
-        st.markdown(f"- ✅ {curso} - Nota: {nota}/10")
+    # Separar cursos obrigatórios e opcionais
+    cursos_obrigatorios = ["Introdução à Informática", "Cybersegurança", "Lógica de Programação em Python"]
+    
+    st.markdown("### Cursos Obrigatórios:")
+    for curso in cursos_obrigatorios:
+        if curso in cursos_concluidos:
+            nota = notas.get(curso, "N/A")
+            st.markdown(f"- ✅ {curso} - Nota: {nota}/10")
+    
+    st.markdown("### Curso Opcional:")
+    if "Fake News e Desinformação" in cursos_concluidos:
+        nota = notas.get("Fake News e Desinformação", "N/A")
+        st.markdown(f"- ✅ Fake News e Desinformação - Nota: {nota}/10")
+    else:
+        st.markdown("- ⚠️ Fake News e Desinformação - Não concluído")
     
     st.markdown("""
     🚀 Continue aprendendo e crescendo! 🚀
     """)
     
-    if st.button("Voltar para Cursos"):
-        st.session_state.pagina = "cursos"
-        st.rerun()
+    col1, col2 = st.columns(2)
     
-    if st.button("Sair"):
-        st.session_state.logado = False
-        st.session_state.usuario_atual = None
-        st.session_state.pagina = "login"
-        st.rerun()
+    with col1:
+        if st.button("Voltar para Cursos"):
+            st.session_state.pagina = "cursos"
+            st.rerun()
+    
+    with col2:
+        if st.button("Sair"):
+            st.session_state.logado = False
+            st.session_state.usuario_atual = None
+            st.session_state.pagina = "login"
+            st.rerun()
 
 # Executar o aplicativo
 if __name__ == "__main__":

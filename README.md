@@ -104,8 +104,8 @@ streamlit run programa/PIM-1S.py
 - Arthur Lucio Parmezan - H70FDH6
 - Luis Otávio Freitas Faria - R8651C0
 - Luan Alves Magalhães - H659IA0
-- Vinicius 
-- Davi
+- Vinicius Cristiano Carmin - H5872C4
+- David Rodrigues Vilchiez - R866238
 
 ## Considerações sobre o Desenvolvimento
 O projeto foi desenvolvido com suporte de ferramentas de Inteligência Artificial, utilizadas principalmente para:
@@ -147,6 +147,11 @@ Os conteúdos dos cursos foram desenvolvidos com base em materiais educacionais 
 - Canal: Joviano Silveira
 - Playlist: "Curso de Python"
 - Link: https://www.youtube.com/watch?v=pv1XzosXVQc&list=PLQpSyz5rZmJpFVb1TidOflNMcVnpDdzAn
+
+### Fake News e Desinformação
+- Material: Atividade de Extensão - Combate à Desinformação
+- Fonte: Material didático da UNIP
+- Arquivo: Atividade de extenção - Combate a desinformação (2).pdf
 
 ## Referências
 ### Bibliografia
